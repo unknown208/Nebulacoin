@@ -38,7 +38,7 @@ static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64_t MAX_MONEY = 3000000 * COIN;
 static const int64_t COIN_YEAR_REWARD = 3 * CENT; // 3% per year
 static const int64_t MAX_MINT_PROOF_OF_STAKE = 0.03 * COIN;	// 3% annual interest
-static const int MODIFIER_INTERVAL_SWITCH = 6400;
+static const int MODIFIER_INTERVAL_SWITCH = 6000;
 
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 // Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp.
@@ -50,7 +50,7 @@ static const int fHaveUPnP = true;
 static const int fHaveUPnP = false;
 #endif
 
-static const uint256 hashGenesisBlock("0x000004bf5c3250c8f648615362b3621bf19977053392e02421946e07a1542793");
+static const uint256 hashGenesisBlock("0x00000f15816bf0fd5c25c3986e685a46241280febb63dcfbc1d8b1043ba7d8d7");
 static const uint256 hashGenesisBlockTestNet("0x");
 inline int64_t PastDrift(int64_t nTime)   { return nTime - 10 * 60; } // up to 10 minutes from the past
 inline int64_t FutureDrift(int64_t nTime) { return nTime + 10 * 60; } // up to 10 minutes from the future

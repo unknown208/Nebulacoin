@@ -964,26 +964,26 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-    int64_t nSubsidy = 10000 * COIN;
+    int64_t nSubsidy = 100 * COIN;
 	if(pindexBest->nHeight < 5)
     {
-        nSubsidy = 50 * COIN;
+        nSubsidy = 10000 * COIN;
     }
 		else if(pindexBest->nHeight < 200)
     {
-		nSubsidy = 150 * COIN;
+		nSubsidy = 50 * COIN;
     }
 		else if(pindexBest->nHeight < 1000)
     {
-		nSubsidy = 500 * COIN;
+		nSubsidy = 100 * COIN;
     }
 		else if(pindexBest->nHeight < 2500)
     {
-		nSubsidy = 150 * COIN;
+		nSubsidy = 300 * COIN;
     }
 		else if(pindexBest->nHeight < 6000)
     {
-		nSubsidy = 300 * COIN;
+		nSubsidy = 150 * COIN;
     }
 	
     if (fDebug && GetBoolArg("-printcreation"))
@@ -2499,7 +2499,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
         const char* pszTimestamp = "You get the money, then the power, then the woman. Dream big!";
         CTransaction txNew;
-        txNew.nTime = 1403337090;
+        txNew.nTime = 1403381807;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2509,9 +2509,9 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1403337090;
+        block.nTime    = 1403381807;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 1454266;
+        block.nNonce   = 411450;
 		if(fTestNet)
         {
             block.nNonce   = 0;
@@ -2538,7 +2538,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nNonce = %u \n", block.nNonce);
 
         //// debug print
-        assert(block.hashMerkleRoot == uint256("0xf8801a6e0319bd00bba02a3d8b4f51912cb9ec50a974f99bdcefdc0b5e5b7554"));
+        assert(block.hashMerkleRoot == uint256("0xdb649401eff27405a8707835a3e7d361f88edcc7643c1f1efef2da934409456c"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
