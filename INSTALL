@@ -1,0 +1,4 @@
+Building Nebulacoin
+See doc/readme-qt.rst for instructions on building Nebulacoin QT.
+
+See doc/build-*.txt for instructions on building nebulacoind.
