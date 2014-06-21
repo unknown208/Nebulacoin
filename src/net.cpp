@@ -1139,12 +1139,7 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    {"107.170.234.82", "107.170.234.82"},
-	{"212.83.181.192", "212.83.181.192"},
-	{"162.243.231.130", "162.243.231.130"},
-	{"seed4.altcloud.info", "seed4.altcloud.info"},
-	{"seed5.altcloud.info", "seed5.altcloud.info"},
-	{"seed6.altcloud.info", "seed6.altcloud.info"},
+    {"23.254.97.249", "23.254.97.249"}, //Main Nebulacoin Seed Node
 };
 
 void ThreadDNSAddressSeed(void* parg)
