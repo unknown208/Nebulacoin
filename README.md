@@ -7,7 +7,7 @@ P2P Port: 56551
 
 Algorithm: X11 POW/POS
 Short: NEB
-Total coin: ~1.55 Million with PoW
+Total coin: ~1.45 Million with PoW
 Block reward: Random Super Blocks
 
  Reward-----Blocks
@@ -25,6 +25,8 @@ Difficulty Readjusts every block
 Confirmations on Transactions: 10
 CoinBase Maturity: 50
 Stake interest: 3% per year
+
+More details on website at: http://www.nebulacoins.com
 
 Development process
 ===========================
